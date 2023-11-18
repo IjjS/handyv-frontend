@@ -1,0 +1,11 @@
+.admin-signin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .instruction {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
