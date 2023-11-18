@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
-  const [adminButtonContent, setAdminButtonContent] = useState("관리자이신가요?");
+  const [adminButtonContent, setAdminButtonContent] =
+    useState("관리자이신가요?");
 
   const handleAdminButtonMouseEnter = () => {
     setAdminButtonContent("관리자 페이지로");
@@ -17,7 +18,7 @@ const Home = () => {
 
   const handleAdminButtonClick = () => {
     navigate("/admin");
-  }
+  };
 
   return (
     <div className="page home-container">

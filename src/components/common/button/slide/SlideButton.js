@@ -1,7 +1,13 @@
 import React from "react";
 import "./SlideButton.scss";
 
-const SlideButton = ({ className, content, onMouseEnter, onMouseLeave, onClick }) => {
+const SlideButton = ({
+  className,
+  content,
+  onMouseEnter,
+  onMouseLeave,
+  onClick,
+}) => {
   const slideButtonClassName = "slide-button";
   const activeClassName = className
     ? className + " " + slideButtonClassName
