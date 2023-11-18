@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SlideButton from "../../components/common/button/pulse/SlideButton";
+import SlideButton from "../../components/common/button/slide/SlideButton";
 import "./Home.scss";
 
 const Home = () => {
