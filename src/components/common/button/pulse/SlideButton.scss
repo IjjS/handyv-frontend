@@ -1,0 +1,44 @@
+@import "../../../../assets/color/color.scss";
+
+$hover-font-color: #705fde;
+
+.slide-button {
+    background-color: $default-button-color;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    padding: 0.8rem 2rem;
+    color: white;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 105%;
+        height: 100%;
+        background-color: $hover-font-color;
+        border-radius: 15px;
+        transform: translate(-110%, 0);
+        transition: 0.5s;
+    }
+
+    &:hover::before {
+        transform: translate(0, 0);
+    }
+
+    &:hover {
+        cursor: pointer;
+        span {
+            transition: 0.5s;
+        }
+    }
+
+    span {
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
