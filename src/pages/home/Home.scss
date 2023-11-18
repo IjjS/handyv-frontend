@@ -1,0 +1,45 @@
+@import "../../assets/color/color.scss";
+
+.home-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-contents {
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .admin-button {
+        width: 220px;
+    }
+}
+
+.app-introducer {
+    margin-bottom: 2rem;
+    span:first-child {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    span:last-child {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $default-logo-color
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.booking-button {
+    &::before {
+        content: "⚡";
+    }
+}
