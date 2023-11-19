@@ -1,10 +1,32 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import SlideButton from "../../../../components/common/button/slide/SlideButton";
+import { useNavigate } from "react-router-dom";
+import { useCreateStation } from "../../../../hooks/queries/station/useStations";
 import "./CreateStation.scss";
 
 const CreateStation = () => {
+  const navigate = useNavigate();
   const [stationName, setStationName] = useState("");
+
+  const mutateOption = {
+    enabled: false,
+    retry: false,
+    refetchOnWindowFocus: false,
+    onSuccess: (data) => {
+      alert(`충전소 ${data.name}의 등록을 완료했습니다.`);
+      navigate("/admin/main");
+    },
+    onError: (error) => {
+      console.log(error.response.data);
+      alert(error.response.data.message);
+    },
+  };
+
+  const { mutate: registerStation } = useCreateStation(
+    stationName,
+    mutateOption,
+  );
 
   const handleStationNameChange = (e) => {
     setStationName(e.target.value);
@@ -23,7 +45,7 @@ const CreateStation = () => {
           value={stationName}
           onChange={handleStationNameChange}
         />
-        <SlideButton content="충전소 등록하기" />
+        <SlideButton content="충전소 등록하기" onClick={registerStation} />
       </div>
     </div>
   );
