@@ -1,6 +1,6 @@
 import React from "react";
-import SlideButton from "../../common/button/slide/SlideButton";
-import HoverToggle from "../../common/button/hover-toggle/HoverToggle";
+import SlideButton from "../../../components/common/button/slide/SlideButton";
+import HoverToggle from "../../../components/common/button/hover-toggle/HoverToggle";
 import { adminFeatures } from "../../../constants/adminFeatures";
 import "./Main.scss";
 

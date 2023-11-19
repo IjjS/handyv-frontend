@@ -3,8 +3,9 @@ import "./App.scss";
 import Header from "./components/common/header/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
-import AdminLanding from "./pages/admin/AdminLanding";
-import Main from "./components/admin/main/Main";
+import Main from "./pages/admin/main/Main";
+import Landing from "./pages/admin/landing/Landing";
+import CreateStation from "./pages/admin/station/CreateStation";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<AdminLanding />} />
+        <Route path="/admin" element={<Landing />} />
         <Route path="/admin/main" element={<Main />} />
+        <Route path="/admin/station/create" element={<CreateStation />} />
       </Routes>
     </div>
   );

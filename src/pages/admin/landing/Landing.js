@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import SignIn from "../../components/admin/signin/SignIn";
-import "./AdminLanding.scss";
+import SignIn from "../../../components/admin/signin/SignIn";
+import "./Landing.scss";
 import { useNavigate } from "react-router-dom";
 
-const Admin = () => {
+const Landing = () => {
   const navigate = useNavigate();
   const [isAdmin, setIsAdmin] = useState(false);
 
@@ -24,4 +24,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Landing;

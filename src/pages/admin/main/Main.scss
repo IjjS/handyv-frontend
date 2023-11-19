@@ -9,3 +9,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.station::before {
+    content: "🏟";
+}
+
+.charger::before {
+    content: "🔌"
+}
