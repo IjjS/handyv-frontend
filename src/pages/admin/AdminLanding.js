@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import SignIn from "../../components/admin/signin/SignIn";
 import "./AdminLanding.scss";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
+  const navigate = useNavigate();
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    console.log(isAdmin);
+    if (isAdmin) {
+      navigate("/admin/main");
+    }
   }, [isAdmin]);
 
   const handleSignInSuccess = () => {
