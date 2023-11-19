@@ -3,7 +3,7 @@ import "./App.scss";
 import Header from "./components/common/header/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
-import Admin from "./pages/admin/Admin";
+import AdminLanding from "./pages/admin/AdminLanding";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<AdminLanding />} />
       </Routes>
     </div>
   );

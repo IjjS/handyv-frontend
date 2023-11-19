@@ -2,22 +2,31 @@ import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import "./SignIn.scss";
 import SlideButton from "../../common/button/slide/SlideButton";
+import useUserByCarNumber from "../../../hooks/queries/user/useUserByCarNumber";
 
-const SignIn = () => {
+const SignIn = ({ onSuccess }) => {
+  const queryOptions = {
+    enabled: false,
+    retry: false,
+    refetchOnWindowFocus: false,
+    onError: (error) => error.response.data,
+  };
+
   const [adminNumber, setAdminNumber] = useState("");
-  const [isAdmin, setIsAdmin] = useState(false);
+  const { data, refetch } = useUserByCarNumber(adminNumber, queryOptions);
 
   useEffect(() => {
-    console.log(isAdmin);
-  }, [isAdmin]);
+    if (data?.userAuthority === "ADMIN") {
+      onSuccess();
+    }
+  }, [data]);
 
   const handleAdminNumberChange = (e) => {
     setAdminNumber(e.target.value);
   };
 
-  const signInAdmin = (e) => {
-    e.preventDefault();
-    setIsAdmin(true);
+  const signInAdmin = () => {
+    refetch();
   };
 
   return (
