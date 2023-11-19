@@ -1,0 +1,36 @@
+@import "/src/assets/color/color.scss";
+
+.dropdown-list {
+    background-color: white;
+    border: 1px solid $default-logo-color;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 16% 0 0 0;
+    top: -24px;
+    z-index: 20;
+    width: 100%;
+
+    li {
+        list-style: none;
+    }
+}
+
+.hover-toggle-button-container {
+    &:hover > .dropdown-list, &:focus > .dropdown-list {
+        visibility: visible;
+        opacity: 1;
+        transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
+        transition-delay: 100ms;
+    }
+    position: relative;
+    
+
+    .root-button {
+        position: relative;
+        z-index: 51;
+    }
+}
