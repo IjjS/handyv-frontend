@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
-import SlideButton from "../../../components/common/button/slide/SlideButton";
+import SlideButton from "../../../../components/common/button/slide/SlideButton";
 import "./CreateStation.scss";
 
 const CreateStation = () => {
