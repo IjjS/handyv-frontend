@@ -10,8 +10,8 @@ const HoverToggle = ({ buttonElement, contentList }) => {
         {contentList.map((dropdownElement, index) => (
           <DropdownMenu
             key={index}
-            title={dropdownElement}
-            path={"/admin/station/create"}
+            title={dropdownElement.title}
+            path={dropdownElement.path}
           />
         ))}
       </ul>

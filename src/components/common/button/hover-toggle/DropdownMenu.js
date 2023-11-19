@@ -5,7 +5,9 @@ import "./DropdownMenu.scss";
 const DropdownMenu = ({ title, path }) => {
   return (
     <li className="dropdown-menu">
-      <Link to={path}>{title}</Link>
+      <Link className="dropdown-menu" to={path}>
+        {title}
+      </Link>
     </li>
   );
 };

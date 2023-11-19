@@ -1,6 +1,7 @@
 import React from "react";
 import SlideButton from "../../common/button/slide/SlideButton";
 import HoverToggle from "../../common/button/hover-toggle/HoverToggle";
+import { adminFeatures } from "../../../constants/adminFeatures";
 import "./Main.scss";
 
 const Main = () => {
@@ -8,18 +9,18 @@ const Main = () => {
     <div className="page admin-main-container">
       <div className="admin-features-container">
         <div className="admin-features-wrapper">
-          <HoverToggle
-            buttonElement={
-              <SlideButton className="station" content="충전소 관리" />
-            }
-            contentList={["충전소 추가"]}
-          />
-          <HoverToggle
-            buttonElement={
-              <SlideButton className="charger" content="충전기 관리" />
-            }
-            contentList={["충전기 추가"]}
-          />
+          {adminFeatures.map((feature, index) => (
+            <HoverToggle
+              key={index}
+              buttonElement={
+                <SlideButton
+                  className={feature.className}
+                  content={feature.content}
+                />
+              }
+              contentList={feature.contentList}
+            />
+          ))}
         </div>
       </div>
     </div>

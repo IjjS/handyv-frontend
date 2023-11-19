@@ -1,10 +1,13 @@
+@import "../../../../assets/color/color.scss";
+
 .dropdown-menu {
     padding: 13px 0;
     border-radius: 20px;
-    margin: 2px;
+    margin: 1.5px;
 
     &:hover {
         background-color: #eaeaea;
         transition: all 0.3s ease;
+        cursor: pointer;
     }
 }
