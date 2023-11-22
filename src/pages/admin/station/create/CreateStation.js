@@ -32,7 +32,7 @@ const CreateStation = () => {
   };
 
   return (
-    <div className="page station-creation-container">
+    <div className="station-creation-container">
       <div className="station-creation-wrapper">
         <span className="instruction">충전소 이름을 입력해주세요</span>
         <TextField

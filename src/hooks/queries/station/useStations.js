@@ -1,8 +1,10 @@
-import { useMutation } from "react-query";
-import { createStation } from "../../../apis/station";
+import { useQuery } from "react-query";
+import { getStations } from "../../../apis/station";
 
-export const useCreateStation = (name, options) => {
-  return useMutation("create-station", () => createStation(name), {
+const useStations = (partialName, options) => {
+  return useQuery(["stations", partialName], () => getStations(partialName), {
     ...options,
   });
 };
+
+export default useStations;

@@ -6,3 +6,10 @@ export const createStation = (name) => {
   };
   return fetcher.post("/stations", requestBody);
 };
+
+export const getStations = (partialName) => {
+  const path = partialName
+    ? `/stations?partialName=${partialName}`
+    : "/stations";
+  return fetcher.get(path);
+};
