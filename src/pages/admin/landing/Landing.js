@@ -40,7 +40,7 @@ const Landing = () => {
   };
 
   return (
-    <div className="admin-container page">
+    <div className="admin-landing-container">
       <div className="admin-signin-container">
         <span className="instruction">관리자 번호를 입력해주세요.</span>
         <TextField
