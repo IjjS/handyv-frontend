@@ -1,0 +1,17 @@
+.charger-creation-container {
+    display: flex;
+    justify-content: center;
+}
+
+.charger-creation-wrapper, .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .instruction {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}

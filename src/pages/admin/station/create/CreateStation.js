@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import SlideButton from "../../../../components/common/button/slide/SlideButton";
 import { useNavigate } from "react-router-dom";
-import { useCreateStation } from "../../../../hooks/queries/station/useStations";
+import useCreateStation from "../../../../hooks/queries/station/useCreateStation";
 import "./CreateStation.scss";
 
 const CreateStation = () => {
@@ -18,7 +18,6 @@ const CreateStation = () => {
       navigate("/admin/main");
     },
     onError: (error) => {
-      console.log(error.response.data);
       alert(error.response.data.message);
     },
   };
